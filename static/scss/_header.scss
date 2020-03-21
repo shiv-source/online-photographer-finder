@@ -1,0 +1,375 @@
+//header_area css
+.header_area{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left:0;
+  z-index: 99;
+  transition: background 0.4s, all 0.3s linear;
+  .navbar{
+    background: transparent;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+
+    .nav{
+      .nav-item{
+        margin-right: 55px;
+        position: relative;
+        
+        .nav-link{
+          font: 500 12px/80px $rob;
+          text-transform: uppercase;
+          color: $dip;
+          padding: 0px;
+          display: inline-block;
+          font-size: 14px;
+          &:after{
+            display: none;
+        }
+    }
+    &:hover, &.active{
+      .nav-link{
+        color: $baseColor;
+    }
+}
+&.submenu{
+  position: relative;
+  ul{
+    border: none;
+    padding: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    margin: 0px;
+    background: #fff;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    @media (min-width: 992px){
+      position: absolute;
+      top: 120%;
+      left: 0px;
+      min-width: 200px;
+      text-align: left;
+      opacity: 0;
+      transition: all 300ms ease-in;
+      visibility: hidden;
+      display: block;
+      border: none;
+      padding: 0px;
+      border-radius: 0px;
+  }
+  &:before{
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: #eeeeee transparent transparent transparent;
+      position: absolute;
+      right: 24px;
+      top: 45px;
+      z-index: 3;
+      opacity: 0;
+      transition: all 400ms linear;
+  }
+  .nav-item{
+      display: block;
+      float: none;
+      margin-right: 0px;
+      border-bottom: 1px solid #ededed;
+      margin-left: 0px;
+      transition: all 0.4s linear;
+      .nav-link{
+        line-height: 45px;
+        color: $dip;
+        padding: 0px 30px;
+        transition: all 150ms linear;
+        display: block;
+        margin-right: 0px;
+    }
+    &:last-child{
+        border-bottom: none;
+    }
+    &:hover{
+        .nav-link{
+          background: $baseColor;
+          color: #fff;
+      }
+  }    
+}
+}
+&:hover{
+    ul{
+      @media (min-width: 992px){
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+    }
+    .nav-item{
+        margin-top: 0px;
+    }
+}
+}
+}
+&:last-child{
+ margin-right: 0px;
+ &:after{
+    display: none;
+}
+}
+}
+> .nav-item{
+
+    &:after{
+        content: '/';
+        position: absolute;
+        right: -23px;
+        top: 28px;
+        font-family: $rob;  
+        font-size: 19px;
+        transform: rotate(-6deg);
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 39px;
+        left: 100%;
+        height: 2px;
+        background: $baseColor;
+        z-index: -1;
+    }
+    &:hover:before{
+       left: -22px;
+       @include transition();
+   } 
+} 
+
+> .nav-item.active{
+
+    &:before{
+       left: -22px;
+       @include transition();
+   } 
+} 
+
+}
+}
+
+
+&.navbar_fixed{
+  .main_menu{
+   position: fixed;
+   width: 100%;
+   top: -70px;
+   left: 0;
+   right: 0;
+   background: #fff;  
+   transform: translateY(70px);
+   transition: transform 500ms ease, background 500ms ease;
+   -webkit-transition: transform 500ms ease, background 500ms ease;
+   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+
+}
+}
+
+.right-button {
+  margin-left: 80px;
+  margin-top: 18px;
+  ul{
+    li{
+        a{
+            color: $dip;
+            font-size: 14px;
+        }
+    }
+}
+}
+}
+
+
+
+
+#search_input_box {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  z-index: 999;
+  text-align: center;
+  padding: 0 20px;
+  display: none;
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+}
+
+#search_input_box .form-control {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 0;
+}
+
+#search_input_box .btn {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+}
+
+#search_input_box .ti-close {
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+.search-inner{
+  background: $baseColor;
+  padding: 5px 15px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.navbar_fixed #search_input_box {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  z-index: 999;
+  text-align: center;
+  padding: 0 20px;
+  top: 80px;
+}
+
+
+
+
+
+
+.card-priceTable{
+  background: $white;
+  border-radius: 4px;
+  padding: 20px;
+  @include transition;
+  &:hover{
+    .main_btn{
+        background: $baseColor;
+        color: #fff;
+        border-color: $baseColor;
+
+    }
+    
+}
+}
+.priceTable-header{
+  padding: 25px 9px;
+  background: $bg_one;
+  margin-bottom: 10px;
+  @include transition;
+
+  @media(min-width: 768px){
+    padding: 45px 10px 30px 10px;
+}
+
+h3{
+    font-size: 27px;
+    color: $dip;
+}
+
+h1{
+    margin-bottom: 0;
+    font-family: $rob;
+    color: $dip;
+}
+p{
+    color: #777;
+}
+}
+.priceTable-price{
+  font-size: 22px;
+
+  @media(min-width: 768px){
+    font-size: 60px;
+}
+
+span{
+    font-size: 22px;
+    display: inline-block;
+
+    @media(min-width: 768px){
+      font-size: 40px;
+      position: relative;
+      bottom: 7px;
+      left: 11px;
+  }
+}
+}
+.priceTable-list{
+  padding: 30px 10px 0;
+  background: $bg_one;
+  margin: 0;
+  @include transition;
+
+
+  li{
+    margin-bottom: 13px;
+    @include transition;
+
+
+    &:last-child{
+      margin-bottom: 0;
+  }
+
+  i,span{
+      font-size: 13px;
+      margin-right: 3px;
+
+      &.positive{
+        color: #797979;
+    }
+
+}
+}
+
+}
+
+.priceTable-footer{
+  padding: 25px 9px;
+  background: $bg_one;
+
+  @media(min-width: 768px){
+    padding: 45px 0;
+}
+.main_btn {
+
+    padding: 0px 50px;
+    font-weight: 500;
+
+}
+}

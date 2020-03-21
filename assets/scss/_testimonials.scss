@@ -1,0 +1,144 @@
+
+/* Testimonial section start
+============================================================================================ */
+.testimonial {
+  max-width: 950px;
+  margin-right: auto;
+  margin-left: auto;
+  .owl-dot {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    display: inline-block;
+    margin: 0 8px;
+    border-radius: 7px;
+    border: 1px solid #797979;
+  }
+  .owl-dot.active{
+    background: $baseColor;
+    border: 1px solid $baseColor;
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: -16px;
+    left: 65%;
+  }
+}
+
+.testimonial__item{
+  .testimonial__img {
+    padding-left: 35px;
+    @media (max-width: 767px){
+      padding-left: 0;
+      width: 100px;
+      margin-bottom: 17px;
+      border-radius: 63px;
+      overflow: hidden;
+    }
+  }
+}
+
+
+
+
+
+.testimonial_para_wrapper {
+  background: #fff;
+  padding: 56px 50px 75px;
+  margin-left: -60px;
+  margin-top: 8px;
+  @media (max-width: 991px){
+
+    padding: 18px 30px;
+    margin-left: -52px;
+
+  }
+}
+
+.testimonial__content h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+  display: inline;
+  float:left;
+
+}
+
+.testimonial__content h6 {
+  font-size: 14px;
+  margin-bottom: 0;
+  display: inline;
+  color: $pfont;
+  font-family: $rob;
+  font-weight: 400;
+
+}
+
+.testimonial__content{
+  span {
+    padding: 0 8px;
+    margin-top: 3px;
+    display: inline-block;
+  }
+
+}
+
+
+.testimonial__i {
+  font-size: 15px !important;
+  font-style: italic;
+  margin-bottom: 0 !important;
+}
+
+.testimonial__icon {
+  font-size: 173px;
+  color: rgba(119, 119, 119, 0.1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  right: 50%;
+}
+
+.testimonial .owl-dots {
+  margin-top: 30px !important;
+}
+
+@media (min-width: 600px) {
+  .testimonial .owl-dots {
+    margin-top: 60px !important;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .testimonial .owl-dots {
+    bottom: -40px;
+    left: 33%;
+  }
+  .testimonial_para_wrapper {
+    margin-left: 0;
+  }
+  .testimonial__icon {
+    font-size: 122px;
+    top: 59%;
+    right: 2%;
+  }
+}
+
+
+
+.testimonial .owl-dots .owl-dot span {
+  width: 20px;
+  height: 4px;
+  background: #cdcad5;
+  border-radius: 5px;
+  margin: 5px 8px;
+}
+
+.testimonial .owl-dots .owl-dot.active span {
+  height: 6px;
+  background: #6059f6;
+}
+
+/* Testimonial section end
+============================================================================================ */

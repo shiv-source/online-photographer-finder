@@ -1,0 +1,76 @@
+/* Service  Area css
+============================================================================================ */
+
+.service-area{
+	.single-service{
+		border: 1px solid transparent;
+		background: $bg_one;
+		text-align: center;
+		padding: 55px 20px 30px;
+		@include transition;
+		&:hover{
+			box-shadow: 0px 10px 36px 4px rgba(131, 131, 131, 0.12);
+			background: #fff;
+			@include transition();
+			.service-icon{
+				color: $baseColor;
+				@include transition();
+			}
+			
+		}
+		.service-icon {
+			margin-bottom: 20px;
+			color: $dip;
+			.flaticon-balloon {
+				transform: rotate(41deg);
+				display: inline-block;
+			}
+			.flaticon-balloon {
+				transform: rotate(41deg);
+				display: inline-block;
+			}
+			.flaticon-camera {
+				display: inline-block;
+				transform: rotate(31deg);
+			}
+
+
+		}
+		.service-content{
+			h5{
+				font-size: 20px;
+				color: $dip;
+				margin-bottom: 18px;
+			}
+			p{
+				line-height: 27px;
+			}
+
+		}
+	}
+}
+.service-page.service-area{
+	background: #fff;
+	.single-service{
+		background: $bg_one;
+	}
+
+}
+.area-heading{
+	margin-bottom: 85px;
+	text-align:center;
+	h3{
+		font-size: 36px;
+		color: $dip;
+		position: relative;
+		text-transform: capitalize;
+		span{
+			color: $baseColor;
+			font-style: italic;
+		}
+	}
+	p{
+		font-size: 14px;
+		color: $pfont;
+	}
+}

@@ -1,0 +1,226 @@
+/* Courses Area css
+============================================================================================ */
+/* Start Portfolio Area css
+============================================================================================ */
+
+.portfolio_area {
+    @media (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+    .filters {
+        ul {
+            padding-left: 0;
+            margin-bottom: 30px;
+            @media (max-width: 991px) {
+                margin-bottom: 20px;
+            }
+            li {
+                display: inline-block;
+                margin-right: 40px;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: $dip;
+                cursor: pointer;
+                position: relative;
+                &:hover{
+                	color: $baseColor;
+                }
+                @include transition();
+
+                @media (max-width: 767px) {
+                    margin-right: 20px;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    right: 0px;
+                    top: 11px;
+                    left: 100%;
+                    height: 2px;
+                    background: $baseColor;
+                }
+                &:hover:before{
+                 left: -22px;
+                 @include transition();
+                 @media ( max-width: 600px){
+                    left: -8px;
+                }
+
+            } 
+            @media ( max-width: 600px){
+                margin-right: 15px;
+                margin-bottom: 10px;
+            }
+        }
+        li.active{
+           color: $baseColor;
+           &:before{
+               left: -22px;
+               @include transition();
+           } 
+       }
+   }
+}
+}
+
+.single_portfolio {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 0;
+        z-index: 0;
+    }
+    @media (max-width: 767px) {
+        margin-bottom: 35px;
+    }
+    .short_info {
+    	position: absolute;
+    	bottom: 20px;
+    	left: 20px;
+    	opacity: 0;
+    	visibility: hidden;
+    	transition: all 300ms linear 0s;
+    	padding: 20px 37px;
+        @include transition();
+        h4 {
+            text-transform: capitalize;
+            font-size: 20px;
+            margin-bottom: 5px;
+            a {
+                color: $dip;
+            }
+        }
+        p {
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+    &:hover {
+        .short_info {
+            opacity: 1;
+            visibility: visible;
+
+        }
+        &:before{
+            opacity: .8;
+            @include transition();
+        }
+    }
+
+
+}
+
+
+
+
+/* End Portfolio Area css
+============================================================================================ */
+
+/* Start Portfolio Details Area css 
+============================================================================================ */
+
+.portfolio_details_area {
+    padding-top: 130px;
+    @media ( max-width: 1199px){
+        padding-top: 80px;
+
+    }
+
+}
+.recent-portfolio{
+    padding: 70px 0 130px;
+    .area-heading{
+        margin-bottom: 41px;
+        text-align: left;
+    }
+    @media ( max-width: 1199px){
+        padding: 70px 0 80px;
+
+    }
+
+
+}
+
+.portfolio_details_inner {
+    padding-bottom: 70px;
+    border-bottom: 1px solid #eeeeee;
+    .row {
+        @media(max-width: 480px) {
+            margin-bottom: 30px;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 26px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .portfolio_right_text {
+        padding: 30px;
+        background: #f6f6f6;
+        @media(max-width: 991px) {
+            margin-top: 0px;
+        }
+        @media(max-width: 576px) {
+            margin-top: 50px;
+        }
+        h4 {
+            font-size: 21px;
+            text-transform: capitalize;
+            margin-bottom: 38px;
+            font-weight: 700;
+        }
+        .list {
+            li {
+                width: 100%;
+                text-align: left;
+                font-weight: 700;
+                font-size: 16px;
+                color: #000;
+                font-family: $play;
+                border-bottom: 1px solid #e4e4e4;
+                margin-bottom: 16px;
+                padding-bottom: 15px;
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    display: inline-block;
+                    float: right;
+                    font-family: $rob;
+                    color: #777777;
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                i {
+                    color: $baseColor;
+                    font-size: 13px;
+                    margin-left: 2px;
+                }
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .project_image {
+        margin-bottom: 50px;
+    }
+}
+
+
+
+/* End Portfolio Details Area css
+============================================================================================ */

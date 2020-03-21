@@ -1,0 +1,76 @@
+/* About Area css
+============================================================================================ */
+.about-area{
+	.about-content{
+		@media (min-width: 1199px) and (max-width: 1199px){
+			padding-top: 30px;
+		}
+		@media (max-width: 991px){
+			margin-top: 50px;			
+		}
+		@media (max-width: 767px){
+			margin-top: 0;
+		}
+		h4{
+			font-size: 36px;
+			color: $dip;
+			font-family: $play;
+			margin-bottom: 18px;
+			line-height: 48px;
+			
+		}
+		p{
+			font-size: 14px;
+			font-family: $rob;
+			color: #777;
+			line-height: 28px;
+			@media (min-width: 768px) and ( max-width: 991px){
+				font-size: 13px;
+				margin-bottom: 10px;
+			} 
+		}
+		.main_btn{
+			padding: 0 50px;
+			margin-top: 7px;
+			background: $baseColor;
+			border-color: $baseColor;
+			&:hover{
+				background: $dip;
+				color: #fff;
+				border-color: $dip;
+			}
+		}
+
+
+	}
+}
+
+.img-styleBox {
+	padding-left: 55px;
+	@media (max-width: 767px){
+		display: none;
+	}
+	.styleBox-border{
+		position: relative;
+		margin-bottom: 100px;
+		&:after{
+			content: '';
+			position: absolute;
+			width: 70%;
+			height: 100%;
+			background-image: url(../img/background/pattern1.jpg);
+			left: -55px;
+			bottom: -55px;
+			z-index: -1;
+		}
+
+	}
+	.styleBox-img2 {
+		position: absolute;
+		bottom:0;
+		right: 20px;
+	}
+}
+
+
+

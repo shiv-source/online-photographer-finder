@@ -1,0 +1,105 @@
+
+/* Pricing table
+======================================================================= */
+
+.card-priceTable{
+	background: $white;
+	border-radius: 4px;
+	padding: 20px;
+	@include transition;
+	&:hover{
+		.main_btn{
+			background: $baseColor;
+			color: #fff;
+			border-color: $baseColor;
+
+		}
+
+	}
+}
+.priceTable-header{
+	padding: 25px 9px;
+	background: $bg_one;
+	margin-bottom: 10px;
+	@include transition;
+
+	@media(min-width: 768px){
+		padding: 45px 10px 30px 10px;
+	}
+
+	h3{
+		font-size: 27px;
+		color: $dip;
+	}
+
+	h1{
+		margin-bottom: 0;
+		font-family: $rob;
+		color: $dip;
+	}
+	p{
+		color: #777;
+	}
+}
+.priceTable-price{
+	font-size: 22px;
+
+	@media(min-width: 768px){
+		font-size: 50px;
+	}
+
+	span{
+		font-size: 22px;
+		display: inline-block;
+
+		@media(min-width: 768px){
+			font-size: 40px;
+			position: relative;
+			bottom: 7px;
+			left: 11px;
+		}
+	}
+}
+.priceTable-list{
+	padding: 30px 10px 0;
+	background: $bg_one;
+	margin: 0;
+	@include transition;
+
+
+	li{
+		margin-bottom: 13px;
+		@include transition;
+
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		i,span{
+			font-size: 13px;
+			margin-right: 3px;
+
+			&.positive{
+				color: #797979;
+			}
+
+		}
+	}
+
+}
+
+.priceTable-footer{
+	padding: 25px 9px;
+	background: $bg_one;
+
+	@media(min-width: 768px){
+		padding: 45px 0;
+	}
+	.main_btn {
+
+		padding: 0px 50px;
+		font-weight: 500;
+
+	}
+}
